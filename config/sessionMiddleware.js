@@ -14,7 +14,7 @@ store.on("error", function (error) {
 
 
 const sessionMiddleware = session({
-	secret: config.sessionSecret,
+	secret: process.env.SESSION_SECRET,
 	resave: false,
 	saveUninitialized: true,
 	store,
