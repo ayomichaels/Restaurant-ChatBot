@@ -3,8 +3,6 @@ const chatForm = document.getElementById("chat-form");
 const chatMessages = document.querySelector(".chat-body");
 
 socket.on("bot message", (message) => {
-	// console.log(message);
-	console.log(message.text.length);
 	console.log(Array.isArray(message.text));
 
 	//check if message.text is an array
@@ -17,7 +15,7 @@ socket.on("bot message", (message) => {
 	} else {
 		message.text = message.text;
 	}
-	outputMessage("Saheed's ChatBot", message);
+	outputMessage("Yakoyo ChatBot", message);
 
 	// Scroll down
 	chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -56,7 +54,7 @@ chatForm.addEventListener("submit", (e) => {
 const outputMessage = (sender, message) => {
 	const div = document.createElement("div");
 	div.classList.add("chat-messages");
-	if (sender === "Saheed's ChatBot") {
+	if (sender === "Yakoyo ChatBot") {
 		div.classList.add("bot");
 	} else {
 		div.classList.add("user");

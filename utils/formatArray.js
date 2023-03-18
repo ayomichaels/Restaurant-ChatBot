@@ -7,7 +7,7 @@ const formatArray = (msg, list) => {
 				return `${item.number}: To ${item.text}`;
 			})
 			.join(`<br>`);
-		arrayMsg = `Please select a number from the list below: <br>` + arrayMsg;
+		arrayMsg = `Please enter a number from the options below: <br>` + arrayMsg;
 		return arrayMsg;
 	}
 

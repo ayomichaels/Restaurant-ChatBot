@@ -7,11 +7,12 @@ const mainMenu = [
 ];
 
 const foodMenu = [
-	{ number: 1, food: "Milk", price: 700 },
-	{ number: 2, food: "Pizza", price: 2500 },
-	{ number: 3, food: "Amala", price: 800 },
-	{ number: 4, food: "Jollof Rice", price: 1400 },
-	{ number: 5, food: "Egusi", price: 1000 },
+	{ number: 1, food: "Asaro Elemi Meje", price: 4500 },
+	{ number: 2, food: "Catfish peppersoup with crab and yam", price: 8500 },
+	{ number: 3, food: "Ofada Rice with Grilled Turkey", price: 5500 },
+	{ number: 4, food: "Beans and Plantain with Fish", price: 4000 },
+	{ number: 5, food: "Smokey Jollof with Chicken and Plantain", price: 6000 },
+	{ number: 6, food: "Yam and egg sauce and fish crumbs", price: 3000 },
 ];
 
 module.exports = {

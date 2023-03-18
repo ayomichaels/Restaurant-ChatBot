@@ -27,7 +27,7 @@ exports.loadMessage = async (io, sessionID) => {
 exports.welcomeMessage = (io, sessionID) => {
 	io.to(sessionID).emit(
 		"bot message",
-		formatMessage(config.botName, "Welcome to Saheed's ChatBot! 🤖 <br> Say hello to the bot")
+		formatMessage(config.botName, "Yakoyo ChatBot!  <br> How can I help you today")
 	);
 };
 
@@ -40,7 +40,7 @@ exports.mainMenu = (io, sessionID) => {
 exports.menu = (io, sessionID) => {
 	let botMessage = formatMessage(
 		config.botName,
-		formatArray("Select One Item To Add to Your Cart", foodMenu)
+		formatArray("Select from the menu to add to cart", foodMenu)
 	);
 	io.to(sessionID).emit("bot message", botMessage);
 	return botMessage;
@@ -81,7 +81,7 @@ exports.orderHistory = async (io, sessionID) => {
 	if (sessionOrder.placedOrder.length < 1) {
 		botMessage = formatMessage(
 			config.botName,
-			"You do not have any order history yet"
+			"No order history"
 		);
 		io.to(sessionID).emit("bot message", botMessage);
 	} else {
@@ -102,7 +102,7 @@ exports.currentOrder = async (io, sessionID) => {
 	let botMessage = "";
 
 	if (sessionOrder.currentOrder.length < 1) {
-		botMessage = formatMessage(config.botName, "You do not have any order yet");
+		botMessage = formatMessage(config.botName, "There is no order item in your cart");
 		io.to(sessionID).emit("bot message", botMessage);
 	} else {
 		botMessage = formatMessage(
@@ -163,6 +163,9 @@ exports.saveOrder = async (io, sessionID, number) => {
 	}
 	if (number === 5) {
 		sessionOrder.currentOrder.push(foodMenu[4]);
+	}
+	if (number === 6) {
+		sessionOrder.currentOrder.push(foodMenu[5]);
 	}
 
 	await sessionOrder.save();
