@@ -51,7 +51,7 @@ This is a chatbot for a restaurant that allows users to place an order, cancel o
 
 To use the restaurant chatbot, follow these steps:
 
--   Visit the chatbot site [Chat Bot](https://chatbot-zznn.onrender.com/) on your device
+-   Visit the chatbot site [Chat Bot](https://yakoyo-bot.onrender.com/) on your device
 
 
 -   The chatbot will send a welcome message. Follow the prompts to interact with the chatBot
