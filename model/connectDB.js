@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 const { config } = require("../config/config");
+require('dotenv').config()
 
 function connectMongo(server) {
 	mongoose.set("strictQuery", false);
 	mongoose
-		.connect(config.mongoURI, {
+		.connect(process.env.MONGO_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		})
